@@ -3,7 +3,7 @@ import Mock from "../mock";
 const database = {
   information: {
     name: "Valentin-Flaviu Cuteanu",
-    aboutContent: "Web Developer -- Cluj-Napoca, Romania",
+    aboutContent: "Software Developer -- Cluj-Napoca, Romania",
     age: 25,
     phone: "+40770636805",
     nationality: "Romanian",
@@ -47,7 +47,63 @@ const database = {
       details:
         "With a good knowledge of the TCP/IP suite, any problem the client might have, can be solved easily."
     }
-  ]
+  ],
+  skills: [
+    {
+      title: "HTML5",
+      value: 80
+    },
+    {
+      title: "CSS3 / SCSS",
+      value: 70
+    },
+    {
+      title: "Javascript",
+      value: 80
+    },
+    {
+      title: "Python",
+      value: 70
+    },
+    {
+      title: "ReactJS",
+      value: 65
+    },
+    {
+      title: "TCP / IP",
+      value: 65
+    }
+  ],
+  experience: {
+    workingExperience: [
+      {
+        id: 1,
+        year: "2018 - Present",
+        position: "IT Specialist",
+        company: "Instinct Imserv"
+      },
+      {
+        id: 2,
+        year: "2012 - Present",
+        position: "Guitar Player",
+        company: "Self-employed"
+      }
+    ],
+    educationExperience: [
+      {
+        id: 1,
+        year: "2019 - 2019",
+        graduation: "Front-end Development",
+        university: "The Informal School of IT"
+      },
+      {
+        id: 2,
+        year: "2008 - 2012",
+        graduation: "High School Graduation",
+        university: 'Liceul de Arte "Aurel Popp"'
+      }
+    ]
+  }
 };
 
 Mock.onGet("/api/information").reply(config => {
@@ -62,5 +118,15 @@ Mock.onGet("/api/contactinfo").reply(config => {
 
 Mock.onGet("/api/services").reply(config => {
   const response = database.services;
+  return [200, response];
+});
+
+Mock.onGet("/api/skills").reply(config => {
+  const response = database.skills;
+  return [200, response];
+});
+
+Mock.onGet("/api/experience").reply(config => {
+  const response = database.experience;
   return [200, response];
 });
