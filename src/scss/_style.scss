@@ -5,7 +5,11 @@
 @import "basic/typography";
 @import "basic/utilities";
 
+@import "components/button";
 @import "components/header";
 @import "components/socialicons";
+@import "components/title";
+@import "components/form";
 
 @import "pages/home";
+@import "pages/contact";
