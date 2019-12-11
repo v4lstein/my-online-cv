@@ -41,7 +41,10 @@ function Home() {
   };
   useEffect(() => {
     axios.get("/api/information").then(response => {
-      setInformation(response.data);
+      setInformation({
+        ...response.data,
+        name: response.data.name.split("-")[0]
+      });
     });
   }, []);
   return (
