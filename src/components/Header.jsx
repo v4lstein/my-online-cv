@@ -15,7 +15,7 @@ function Header() {
     axios.get("/api/information").then(response => {
       setInformation(response.data);
     });
-  });
+  }, []);
 
   return (
     <nav className={navigationToggler ? "mi-header is-visible" : "mi-header"}>
@@ -65,6 +65,7 @@ function Header() {
             <a
               rel="noopener noreferrer"
               target="_blank"
+              // Strange error when using the information object
               href="https://github.com/v4lstein"
             >
               Valentin Cuteanu

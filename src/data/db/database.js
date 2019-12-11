@@ -6,7 +6,7 @@ const database = {
     aboutContent:
       "I am a web developer and guitar player from Cluj-Napoca, Romania. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.",
     age: 25,
-    phone: "+0770636805",
+    phone: "+40770636805",
     nationality: "Romanian",
     language: "Romanian, English",
     email: "valentin.cuteanu@gmail.com",
