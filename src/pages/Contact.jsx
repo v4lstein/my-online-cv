@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
-
+import Layout from "../components/Layout";
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <Layout>
+      <div>Contact</div>
+    </Layout>
+  );
 };
 
 export default Contact;
