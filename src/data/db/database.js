@@ -103,7 +103,38 @@ const database = {
         university: 'Liceul de Arte "Aurel Popp"'
       }
     ]
-  }
+  },
+  portfolio: [
+    {
+      id: 1,
+      title: "MyIMDB",
+      subtitle: "A group project that is cool!",
+      imageUrl:
+        "https://www.valuecoders.com/blog/wp-content/uploads/2016/08/react.png",
+      largeImageUrl: ["/images/portfolio-image-1-lg.jpg"],
+      url: "https://dribbble.com"
+    },
+    {
+      id: 2,
+      title: "The Mover",
+      subtitle: "An assignment bla bldasalsd",
+      imageUrl:
+        "https://www.valuecoders.com/blog/wp-content/uploads/2016/08/react.png",
+      largeImageUrl: [
+        "/images/portfolio-image-4-lg.jpg",
+        "/images/portfolio-image-4-lg2.jpg"
+      ],
+      url: "https://facebook.com"
+    },
+    {
+      id: 3,
+      title: "Tigan Borat",
+      subtitle: "Un cacat pe bat",
+      imageUrl:
+        "https://www.valuecoders.com/blog/wp-content/uploads/2016/08/react.png",
+      url: "https://pinterest.com"
+    }
+  ]
 };
 
 Mock.onGet("/api/information").reply(config => {
@@ -128,5 +159,10 @@ Mock.onGet("/api/skills").reply(config => {
 
 Mock.onGet("/api/experience").reply(config => {
   const response = database.experience;
+  return [200, response];
+});
+
+Mock.onGet("/api/portfolio").reply(config => {
+  const response = database.portfolio;
   return [200, response];
 });
