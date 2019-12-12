@@ -17,11 +17,8 @@ const database = {
     },
     brandImage:
       "https://tctechcrunch2011.files.wordpress.com/2013/01/github-logo.png?w=300&h=300",
-    aboutImage:
-      "https://opensource.com/sites/default/files/styles/image-full-size/public/lead-images/github-universe.jpg?itok=lwRZddXA",
-    aboutImageLg:
-      "https://opensource.com/sites/default/files/styles/image-full-size/public/lead-images/github-universe.jpg?itok=lwRZddXA",
-    cvfile: ""
+    aboutImage: "./img/about.jpg",
+    cvfile: "./files/no-cv-yet.txt"
   },
   contactInfo: {
     phoneNumbers: ["+40770636805"],
@@ -109,30 +106,25 @@ const database = {
       id: 1,
       title: "MyIMDB",
       subtitle: "A group project that is cool!",
-      imageUrl:
-        "https://www.valuecoders.com/blog/wp-content/uploads/2016/08/react.png",
-      largeImageUrl: ["/images/portfolio-image-1-lg.jpg"],
-      url: "https://dribbble.com"
+      imageUrl: "https://i.ytimg.com/vi/sZDjqTnfiGA/maxresdefault.jpg",
+      live: "",
+      github: "https://github.com"
     },
     {
       id: 2,
       title: "The Mover",
-      subtitle: "An assignment bla bldasalsd",
-      imageUrl:
-        "https://www.valuecoders.com/blog/wp-content/uploads/2016/08/react.png",
-      largeImageUrl: [
-        "/images/portfolio-image-4-lg.jpg",
-        "/images/portfolio-image-4-lg2.jpg"
-      ],
-      url: "https://facebook.com"
+      subtitle: "Filler text :D - will update later",
+      imageUrl: "https://i.ytimg.com/vi/sZDjqTnfiGA/maxresdefault.jpg",
+      live: "/",
+      github: "https://github.com"
     },
     {
       id: 3,
-      title: "Tigan Borat",
-      subtitle: "Un cacat pe bat",
-      imageUrl:
-        "https://www.valuecoders.com/blog/wp-content/uploads/2016/08/react.png",
-      url: "https://pinterest.com"
+      title: "Agenda App",
+      subtitle: "Filler text :D - will update later",
+      imageUrl: "https://i.ytimg.com/vi/sZDjqTnfiGA/maxresdefault.jpg",
+      live: "/",
+      github: "https://github.com"
     }
   ]
 };

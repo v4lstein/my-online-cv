@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import FsLightbox from "fslightbox-react";
-import * as Icon from "react-feather";
 import Sectiontitle from "../components/Sectiontitle";
 import Layout from "../components/Layout";
 import Service from "../components/Service";
 
 function About() {
-  const [toggler, setToggler] = useState(false);
   const [information, setInformation] = useState("");
   const [services, setServices] = useState([]);
-
-  const handleToggler = event => {
-    setToggler({
-      toggler: event
-    });
-  };
 
   useEffect(() => {
     axios.get("/api/information").then(response => {
@@ -34,18 +25,7 @@ function About() {
           <div className="row">
             <div className="col-lg-6">
               <div className="mi-about-image">
-                <img
-                  src={information.aboutImage}
-                  alt="about"
-                  onClick={() => handleToggler(!toggler)}
-                />
-                <span className="mi-about-image-icon">
-                  <Icon.ZoomIn />
-                </span>
-                <FsLightbox
-                  toggler={toggler}
-                  sources={[information.aboutImageLg]}
-                />
+                <img src={information.aboutImage} alt="about" />
               </div>
             </div>
             <div className="col-lg-6">

@@ -1,14 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import * as Icon from "react-feather";
-import FsLightbox from "fslightbox-react";
 
 function Portfolio(props) {
-  const [toggler, setToggler] = useState(false);
-  const { title, subtitle, imageUrl, largeImageUrl, url } = props.content;
-
-  const handleToggler = value => {
-    setToggler(value);
-  };
+  const { title, subtitle, imageUrl, live, github } = props.content;
 
   return (
     <div
@@ -19,35 +13,32 @@ function Portfolio(props) {
       <div className="mi-portfolio-image">
         <img src={imageUrl} alt={title} />
         <ul>
-          {!largeImageUrl ? null : (
+          {!live ? null : (
             <li>
-              <button onClick={() => handleToggler(!toggler)}>
-                <Icon.ZoomIn />
-              </button>
+              <a rel="noopener noreferrer" target="_blank" href={live}>
+                <Icon.PlayCircle />
+              </a>
             </li>
           )}
-          {url ? (
+          {github ? (
             <li>
-              <a rel="noopener noreferrer" target="_blank" href={url}>
-                <Icon.Link />
+              <a rel="noopener noreferrer" target="_blank" href={github}>
+                <Icon.GitHub />
               </a>
             </li>
           ) : null}
         </ul>
       </div>
-      {!url ? (
+      {!github ? (
         <h5>{title}</h5>
       ) : (
         <h5>
-          <a rel="noopener noreferrer" target="_blank" href={url}>
+          <a rel="noopener noreferrer" target="_blank" href={github}>
             {title}
           </a>
         </h5>
       )}
       {subtitle ? <h6>{subtitle}</h6> : null}
-      {!largeImageUrl ? null : (
-        <FsLightbox toggler={toggler} sources={largeImageUrl} />
-      )}
     </div>
   );
 }

@@ -68,7 +68,7 @@ function Header() {
               // Strange error when using the information object
               href="https://github.com/v4lstein"
             >
-              Valentin Cuteanu
+              V4lstein
             </a>
           </b>
         </p>
