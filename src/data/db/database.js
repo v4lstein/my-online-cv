@@ -97,7 +97,7 @@ const database = {
         id: 2,
         year: "2008 - 2012",
         graduation: "High School Graduation",
-        university: 'Liceul de Arte "Aurel Popp"'
+        university: 'Liceul de Arta "Aurel Popp"'
       }
     ]
   },
@@ -105,26 +105,48 @@ const database = {
     {
       id: 1,
       title: "MyIMDB",
-      subtitle: "A group project that is cool!",
-      imageUrl: "https://i.ytimg.com/vi/sZDjqTnfiGA/maxresdefault.jpg",
-      live: "",
-      github: "https://github.com"
+      subtitle: "A group project with many backend interactions",
+      imageUrl: "./img/imdb.png",
+      live: "https://crinel.github.io/myIMDB-10.1/",
+      github: "https://github.com/crinel/myIMDB-10.1"
     },
     {
       id: 2,
       title: "The Mover",
-      subtitle: "Filler text :D - will update later",
-      imageUrl: "https://i.ytimg.com/vi/sZDjqTnfiGA/maxresdefault.jpg",
-      live: "/",
-      github: "https://github.com"
+      subtitle: "Cool little browser game",
+      imageUrl: "./img/mover.png",
+      live: "https://v4lstein.github.io/the-mover",
+      github: "https://github.com/v4lstein/the-mover"
     },
     {
       id: 3,
       title: "Agenda App",
-      subtitle: "Filler text :D - will update later",
-      imageUrl: "https://i.ytimg.com/vi/sZDjqTnfiGA/maxresdefault.jpg",
-      live: "/",
-      github: "https://github.com"
+      subtitle: "A simple app with CRUD operations",
+      imageUrl: "./img/agenda.png",
+      live: "https://v4lstein.github.io/AgendaApp/",
+      github: "https://github.com/v4lstein/AgendaApp"
+    },
+    {
+      id: 4,
+      title: "IMDB Extras",
+      subtitle: "Small ExpressJS REST API for getting some data from IMDB",
+      imageUrl: "./img/node.jpg",
+      github: "https://github.com/v4lstein/imdb-extras"
+    },
+    {
+      id: 5,
+      title: "SubMe",
+      subtitle: "An under construction subtitle generator app",
+      imageUrl: "./img/node.jpg",
+      github: "https://github.com/vladgrecu/Subme"
+    },
+    {
+      id: 6,
+      title: "BitLuck",
+      subtitle: "A client-side version of the now defunct directory.io website",
+      imageUrl: "./img/bitluck.png",
+      github: "https://github.com/v4lstein/BitLuck",
+      live: "https://v4lstein.github.io/BitLuck/"
     }
   ]
 };

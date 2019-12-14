@@ -5,6 +5,7 @@ import Socialicons from "../components/Socialicons";
 import Layout from "../components/Layout";
 
 function Home() {
+  document.title = "Home | Valentin Cuteanu";
   const [information, setInformation] = useState("");
   const paramConfig = {
     particles: {

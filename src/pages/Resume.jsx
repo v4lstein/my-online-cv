@@ -8,6 +8,7 @@ import Progress from "../components/Progress";
 import Resume from "../components/Resume";
 
 function Resumes() {
+  document.title = "Resume | Valentin Cuteanu";
   const [skills, setSkills] = useState([]);
   const [workingExperience, setWorkingExperience] = useState([]);
   const [educationExperience, setEducationExperience] = useState([]);

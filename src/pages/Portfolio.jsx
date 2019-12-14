@@ -6,6 +6,7 @@ import Sectiontitle from "../components/Sectiontitle";
 import Layout from "../components/Layout";
 
 function Portfolios() {
+  document.title = "Portfolio | Valentin Cuteanu";
   const [portfolios, setPortfoios] = useState([]);
 
   useEffect(() => {

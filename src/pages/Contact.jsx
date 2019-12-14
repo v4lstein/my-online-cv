@@ -5,6 +5,7 @@ import Sectiontitle from "../components/Sectiontitle";
 import Layout from "../components/Layout";
 
 function Contact() {
+  document.title = "Contact | Valentin Cuteanu";
   const [phoneNumbers, setPhoneNumbers] = useState([]);
   const [emailAddress, setEmailAddress] = useState([]);
   const [address, setAddress] = useState([]);
@@ -32,9 +33,22 @@ function Contact() {
       setError(true);
       setMessage("Message is required");
     } else {
-      setError(false);
-      setMessage("You message has been sent!!!");
+      submitForm();
     }
+  };
+
+  const submitForm = () => {
+    const templateId = "template_HVCPqYAF";
+    window.emailjs
+      .send("gmail", templateId, formdata)
+      .then(res => {
+        setError(false);
+        setMessage("You message has been sent!!!");
+      })
+      .catch(err => {
+        setError(true);
+        setMessage("An error occured. Please, try again later!");
+      });
   };
   const handleChange = event => {
     setFormdata({
@@ -42,6 +56,7 @@ function Contact() {
       [event.currentTarget.name]: event.currentTarget.value
     });
   };
+
   const numberFormatter = number => {
     const phnNumber = number;
     return phnNumber;

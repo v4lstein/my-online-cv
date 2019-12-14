@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Service from "../components/Service";
 
 function About() {
+  document.title = "About | Valentin Cuteanu";
   const [information, setInformation] = useState("");
   const [services, setServices] = useState([]);
 
@@ -81,7 +82,12 @@ function About() {
                     </li>
                   )}
                 </ul>
-                <a href={information.cvfile} className="mi-button">
+                <a
+                  href={information.cvfile}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="mi-button"
+                >
                   Download CV
                 </a>
               </div>
